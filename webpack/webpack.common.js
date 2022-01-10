@@ -40,7 +40,7 @@ module.exports = {
         test: /\.(ico|jpg|jpeg|png|gif)(\?.*)?$/,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/images/[hash][ext][query]'
+          filename: 'assets/images/[name][hash][query]'
         }
       },
       {
