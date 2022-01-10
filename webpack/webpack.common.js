@@ -19,7 +19,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../public'), to: 'public' }] }),
+    new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../public'), to: 'assets' }] }),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/index.html'),
     }),
@@ -37,12 +37,24 @@ module.exports = {
         type: 'javascript/auto',
       },
       {
-        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[path][name].[ext]',
-          },
+        test: /\.(ico|jpg|jpeg|png|gif)(\?.*)?$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[hash][ext][query]'
+        }
+      },
+      {
+        test: /\.(eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[hash][ext][query]'
+        }
+      },
+      {
+        test: require.resolve("jquery"),
+        loader: "expose-loader",
+        options: {
+          exposes: ["$", "jQuery"],
         },
       },
     ],

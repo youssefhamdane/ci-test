@@ -1,0 +1,98 @@
+.actualite {
+  background-image: url("../images/bg-actualite.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 600px;
+  article {
+    .container {
+      padding-top: 62px;
+      padding-bottom: 62px;
+      .category {
+        color:#BCAF9C;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-bottom: 47px;
+      }
+      .title {
+        color:#fff;
+        font-weight: 500;
+        font-size: 30px;
+        margin-bottom: 64px;
+      }
+      .date {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.4);
+        margin-bottom: 47px;
+      }
+      .excerpt {
+        font-size: 20px;
+        color:#fff;
+        margin-bottom: 48px;
+        max-width: 536px;
+      }
+      .buttons {
+        display: flex;
+        gap: 20px;
+        .btn-plus {
+          font-size: 19px;
+          color:#fff;
+          border-radius: 4px;
+          background-color: #BCAF9C;
+          padding: 16px 42px;
+        }
+        .btn-tout {
+          color:#BCAF9C;
+          border: 1px solid #BCAF9C;
+          border-radius: 4px;
+          padding: 16px 42px;
+        }
+      }
+    }
+    .thumbnail {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .overlay {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 189px;
+      padding-bottom: 20px;
+      background: linear-gradient(0deg, #132749 0%, rgba(255,255,255,0) 100%);
+    }
+  }
+  .owl-dots {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 35px;
+    gap:24px;
+    .owl-dot {
+      border: 2px solid #fff;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      &.active {
+        background-color: #fff;
+      }
+    }
+  }
+}

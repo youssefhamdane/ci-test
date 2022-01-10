@@ -1,0 +1,43 @@
+.top-menu {
+  background-color: #4A5972;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 68px;
+  }
+  .list-socm {
+    display: flex;
+    align-items: center;
+    .socm-item {
+      .socm-link {
+        font-size: 24px;
+        padding: 8px;
+        color: #BCAF9C;
+      }
+    }
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    .menu-item {
+      .menu-link {
+        padding: 8px;
+        color: #fff;
+        display: block;
+        font-weight: 500;
+        .icon {
+          &.search {
+            background-image: url("../images/icon-search.png");
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+}

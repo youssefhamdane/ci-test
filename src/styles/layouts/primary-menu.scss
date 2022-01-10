@@ -1,0 +1,53 @@
+.primary-menu {
+  box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+  @media (max-width: 992px) {
+    display: none;
+  }
+  .container {
+    min-height: 156px;
+    display: flex;
+    align-items: center;
+    .logo {
+      min-width: 280px;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      .menu-item {
+        padding: 0 35px;
+        .menu-link {
+          font-weight: 500;
+          font-size: 20px;
+          color:#4A5972;
+          display: block;
+          position: relative;
+          &:after {
+            content: '';
+            width: 100%;
+            height: 0;
+            background-color: #BCAF9C;
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+            right: 0;
+            transition: height .2s ease-in;
+          }
+          .icon {
+            &.home {
+              background: url("../images/icon-home.png") no-repeat center;
+              background-size: auto;
+              width: 39px;
+              height: 39px;
+              display: block;
+            }
+          }
+        }
+        &.active,&:hover {
+          .menu-link:after {
+            height: 3px;
+          }
+        }
+      }
+    }
+  }
+}

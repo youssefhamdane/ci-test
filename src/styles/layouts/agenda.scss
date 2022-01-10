@@ -1,0 +1,95 @@
+.agenda {
+  background-color: #4A5972;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .group-title {
+    text-align: center;
+    .title {
+      font-weight: bold;
+      font-size: 50px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+  .owl-carousel {
+    margin-top: 60px;
+    .owl-item {
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform,opacity .2s;
+    }
+    .owl-item:not(.active),.owl-item.active + .owl-item.active {
+      transform: scale(0.9);
+      opacity: .5;
+    }
+      .card {
+        max-width: 600px;
+        min-height: 634px;
+        width: 100%;
+        overflow: visible;
+        position: inherit;
+        border-radius: 0;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 0 50px -20px;
+        .thumbnail {
+          .date {
+            position: absolute;
+            left: -40px;
+            top: -40px;
+            width: 126px;
+            height: 129px;
+            background-color: #BCAF9C;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .jour {
+              font-weight: 600;
+              font-size: 79px;
+              color:#fff;
+              line-height: 1;
+            }
+            .mois {
+              font-weight: 600;
+              font-size: 25px;
+              color:#fff;
+            }
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .content {
+          padding: 38px 38px 30px;
+
+          .title {
+            font-weight: bold;
+            font-size: 30px;
+            color:#4A5972;
+          }
+          .location {
+            font-style: italic;
+            color:#4A5972;
+            margin-top: 16px;
+            .icon {
+              color:#BCAF9C;
+            }
+          }
+          .suite {
+            color:#4A5972;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 56px;
+            float: right;
+        }
+        }
+      }
+  }
+
+}

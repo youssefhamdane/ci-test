@@ -1,6 +1,10 @@
-$body-color: slateblue;
+@import "./variables";
+@import "~bootstrap/scss/bootstrap";
+//@import "~animate.css/animate.css";
+@import "~owl.carousel/src/scss/owl.carousel";
+$theme-colors: (
+        primary: #05491f
+);
 
-body {
-  color: $body-color;
-  font-family: sans-serif;
-}
+@import "./global";
+@import "./home";

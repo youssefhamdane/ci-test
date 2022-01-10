@@ -23,14 +23,24 @@ module.exports = merge(common, {
     }),
     new ESLintPlugin({
       extensions: 'js',
-      emitWarning: true,
+      emitWarning: false,
+      failOnWarning: false,
+      failOnError: false,
+      emitError: false,
       files: Path.resolve(__dirname, '../src'),
     }),
     new StylelintPlugin({
       files: Path.join('src', '**/*.s?(a|c)ss'),
+      failOnWarning: false,
+      failOnError: false,
+      emitError: false,
+      emitWarning: false
     }),
     new ESLintPlugin({
-      emitWarning: true,
+      emitWarning: false,
+      failOnWarning: false,
+      failOnError: false,
+      emitError: false,
     }),
   ],
   module: {

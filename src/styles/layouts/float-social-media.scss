@@ -1,0 +1,41 @@
+.float-social-media {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 1000;
+  margin-top: -110px;
+  .list-socm {
+    .socm-item {
+      margin-bottom: 14px;
+      .socm-link {
+        background: linear-gradient(180deg, rgba(11,40,62,1) 0%, rgba(73,88,113,1) 100%);
+        border-bottom-left-radius: 48px;
+        border-top-left-radius: 48px;
+        position: relative;
+        color: #0B283E;
+        width: 66px;
+        height: 59px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 26px;
+        .icon {
+          z-index: 1000;
+        }
+        &:before {
+          content: "";
+          top: 0;
+          left: 10px;
+          bottom: 0;
+          margin: auto;
+          background-color: #fff;
+          border-radius: 48px;
+          width: 48px;
+          height: 48px;
+          position: absolute;
+        }
+
+      }
+    }
+  }
+}
